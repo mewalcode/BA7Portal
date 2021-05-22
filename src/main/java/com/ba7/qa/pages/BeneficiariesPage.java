@@ -91,8 +91,8 @@ public class BeneficiariesPage extends TestBase {
 		zipCode.sendKeys(zip);
 		continueButton.click();
 		useSuggBun.click();
-		TestUtil.ByVisibleElement(save);
-		save.click();
+//		TestUtil.ByVisibleElement(save);
+//		save.click();
 //		yes.click();
 
 	}
