@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BA7 portal Test Automation Test Suite">
+
+	<listeners>
+		<listener class-name="com.qa.ExtentReportListener.ExtentReporterNG" />
+	</listeners>
+
+
+	<test name="BA7 portal Test Verizon">
+		<classes>
+			<class name="com.ba7.qa.testcases.LoginPageTest"></class>
+			<class name="com.ba7.qa.testcases.HomePageTest"></class>
+			<class name="com.ba7.qa.testcases.PensionPageTest"></class>
+			<class name="com.ba7.qa.testcases.BeneficiaryPageTest"></class>
+
+		</classes>
+	</test>
+</suite>

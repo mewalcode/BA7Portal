@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [BA7 portal Test Automation Test Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.qa.ExtentReportListener.ExtentReporterNG"/>
+  </listeners>
+  <test name="BA7 portal Test Verizon(failed)">
+    <classes>
+      <class name="com.ba7.qa.testcases.LoginPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="loginTest" invocation-numbers="3"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.ba7.qa.testcases.LoginPageTest -->
+      <class name="com.ba7.qa.testcases.BeneficiaryPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="addBeneTest"/>
+        </methods>
+      </class> <!-- com.ba7.qa.testcases.BeneficiaryPageTest -->
+      <class name="com.ba7.qa.testcases.HomePageTest">
+        <methods>
+          <include name="validatePensionTabTest"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="validatePenisonSnapshotTest"/>
+        </methods>
+      </class> <!-- com.ba7.qa.testcases.HomePageTest -->
+    </classes>
+  </test> <!-- BA7 portal Test Verizon(failed) -->
+</suite> <!-- Failed suite [BA7 portal Test Automation Test Suite] -->

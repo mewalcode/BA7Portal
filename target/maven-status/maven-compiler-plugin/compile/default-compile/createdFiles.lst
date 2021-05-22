@@ -1,0 +1,10 @@
+com\ba7\qa\pages\BeneficiariesPage.class
+com\ba7\qa\util\WebEventListener.class
+com\ba7\qa\pages\ProfilePage.class
+com\ba7\qa\util\TestUtil.class
+com\ba7\qa\base\TestBase.class
+com\ba7\qa\pages\LibraryPage.class
+com\ba7\qa\pages\LoginPage.class
+com\ba7\qa\pages\HomePage.class
+com\qa\ExtentReportListener\ExtentReporterNG.class
+com\ba7\qa\pages\PensionPage.class
