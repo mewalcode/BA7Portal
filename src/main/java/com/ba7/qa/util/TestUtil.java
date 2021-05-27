@@ -14,6 +14,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 import com.ba7.qa.base.TestBase;
 
@@ -60,7 +61,8 @@ public class TestUtil extends TestBase {
 		}
 		return data;
 	}
-	//it can used as TestUtil.takeScreenshotAtEndOfTest whenever required
+
+	// it can used as TestUtil.takeScreenshotAtEndOfTest whenever required
 	public static void takeScreenshotAtEndOfTest() throws IOException {
 		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		String currentDir = System.getProperty("user.dir");
@@ -68,9 +70,35 @@ public class TestUtil extends TestBase {
 		FileUtils.copyFile(scrFile, new File(currentDir + "/screenshots/" + System.currentTimeMillis() + ".png"));
 
 	}
-	
+
 	public static void ByVisibleElement(WebElement web) {
-		JavascriptExecutor js =(JavascriptExecutor)driver;
+		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView()", web);
+	}
+
+	public static void selectDropownOption(WebElement webElement, String type, String option) {
+
+		Select sel = new Select(webElement);
+		switch (type) {
+		case "index":
+
+			sel.selectByIndex(Integer.parseInt(option));
+			break;
+
+		case "value":
+
+			sel.selectByValue(option);
+			break;
+			
+			
+		case "text":
+
+			sel.selectByVisibleText(option);
+			break;
+			
+		default:
+			System.out.println("Please pass correct select criteria...");
+			break;
+		}
 	}
 }

@@ -1,29 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="1" verbose="0" name="Failed suite [Surefire suite]">
+<suite thread-count="1" name="Failed suite [Surefire suite]" verbose="0">
   <test name="Surefire test(failed)">
     <classes>
-      <class name="com.ba7.qa.testcases.BeneficiaryPageTest">
-        <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="addBeneTest"/>
-        </methods>
-      </class> <!-- com.ba7.qa.testcases.BeneficiaryPageTest -->
-      <class name="com.ba7.qa.testcases.PensionPageTest">
-        <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="clickBeneficiariesTabTest"/>
-        </methods>
-      </class> <!-- com.ba7.qa.testcases.PensionPageTest -->
       <class name="com.ba7.qa.testcases.LoginPageTest">
         <methods>
           <include name="setUp"/>
-          <include name="loginTest" invocation-numbers="1"/>
+          <include name="loginTest" invocation-numbers="0 1 2 3 4 5 6"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.ba7.qa.testcases.LoginPageTest -->
+      <class name="com.ba7.qa.testcases.HomePageTest">
+        <methods>
+          <include name="validatePensionTabTest"/>
+          <include name="tearDown"/>
+          <include name="validateHomePageTitleTest"/>
+          <include name="setUp"/>
+          <include name="cickPensionTabTest"/>
+          <include name="validatePenisonSnapshotTest"/>
+        </methods>
+      </class> <!-- com.ba7.qa.testcases.HomePageTest -->
     </classes>
   </test> <!-- Surefire test(failed) -->
 </suite> <!-- Failed suite [Surefire suite] -->

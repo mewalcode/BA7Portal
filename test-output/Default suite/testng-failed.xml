@@ -6,8 +6,7 @@
       <class name="com.ba7.qa.testcases.BeneficiaryPageTest">
         <methods>
           <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="addBeneTest"/>
+          <include name="addBeneTest" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.ba7.qa.testcases.BeneficiaryPageTest -->
     </classes>

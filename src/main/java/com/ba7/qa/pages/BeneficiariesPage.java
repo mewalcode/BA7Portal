@@ -58,11 +58,10 @@ public class BeneficiariesPage extends TestBase {
 
 	@FindBy(xpath = "//button[@class=\"btn btn-primary\"]")
 	WebElement save;
-	
+
 	@FindBy(xpath = "(//button[@data-bind=\"click: function () { $parent.selectOption($parent.getButtonValue($data)); }, text: $parent.getButtonText($data), css: $parent.getButtonClass($index)\"])[1]")
 	WebElement yes;
-	
-	
+
 	// Initializing the Page objects
 
 	public BeneficiariesPage() {
@@ -74,20 +73,26 @@ public class BeneficiariesPage extends TestBase {
 
 		makeChanges.click();
 		makeAnotherBene.click();
-		Select sta = new Select(addDropDown);
-		sta.selectByVisibleText(addDD);
+//		Select sta = new Select(addDropDown);
+//		sta.selectByVisibleText(addDD);
+		
+		//to optimize code we can use generic method which is def in utility class
+		TestUtil.selectDropownOption(addDropDown, "text",addDD);
 		firstName.sendKeys(fName);
 		lastName.sendKeys(lName);
 		ssn.sendKeys(sn);
 		birthDate.sendKeys(birth);
-		Select ge = new Select(genderDropDown);
-		ge.selectByVisibleText(genderDD);
-		Select con = new Select(countryDropdown);
-		con.selectByVisibleText(countryDD);
+//		Select ge = new Select(genderDropDown);
+//		ge.selectByVisibleText(genderDD);
+		TestUtil.selectDropownOption(genderDropDown, "text",genderDD);
+//		Select con = new Select(countryDropdown);
+//		con.selectByVisibleText(countryDD);
+		TestUtil.selectDropownOption(countryDropdown, "text",countryDD);
 		address.sendKeys(add);
 		city.sendKeys(c);
-		Select st = new Select(stateDropdown);
-		st.selectByValue(stDD);
+//		Select st = new Select(stateDropdown);
+//		st.selectByValue(stDD);
+		TestUtil.selectDropownOption(stateDropdown, "value",stDD);
 		zipCode.sendKeys(zip);
 		continueButton.click();
 		useSuggBun.click();

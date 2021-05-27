@@ -49,11 +49,11 @@ public class BeneficiaryPageTest extends TestBase {
 	}
 	
 	
-	@AfterMethod
-	public void tearDown() {
-		driver.quit();
-	}
-	
+//	@AfterMethod
+//	public void tearDown() {
+//		driver.quit();
+//	}
+//	
 	
 	
 
